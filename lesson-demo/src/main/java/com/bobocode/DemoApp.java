@@ -1,14 +1,14 @@
 package com.bobocode;
 
 import com.bobocode.bibernate.OrmImpl;
-import com.bobocode.entity.Participant;
+import com.bobocode.entity.Quote;
 
 public class DemoApp {
     public static void main(String[] args) {
         var orm = new OrmImpl("jdbc:postgresql://0.tcp.eu.ngrok.io:11026/postgres", "bobouser", "bobopass");
 
-        var participant = orm.findById(Participant.class, 23);
-        System.out.println(participant);
+        var quote = orm.findById(Quote.class, 1);
+        System.out.println(quote);
     }
 
 }
