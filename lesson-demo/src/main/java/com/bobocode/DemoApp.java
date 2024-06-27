@@ -1,5 +1,6 @@
 package com.bobocode;
 
+import com.zaxxer.hikari.HikariDataSource;
 import lombok.SneakyThrows;
 import org.postgresql.ds.PGSimpleDataSource;
 
@@ -25,7 +26,7 @@ public class DemoApp {
 
     private static DataSource initDb() { // todo: refactor to use a custom pooled data source
         var dataSource = new PGSimpleDataSource();
-        dataSource.setURL("jdbc:postgresql://0.tcp.eu.ngrok.io:10874/postgres");
+        dataSource.setURL("jdbc:postgresql://0.tcp.eu.ngrok.io:11708/postgres");
         dataSource.setUser("bobouser");
         dataSource.setPassword("bobopass");
         return dataSource;
